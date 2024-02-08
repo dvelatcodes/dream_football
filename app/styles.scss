@@ -1,0 +1,102 @@
+.carousel{
+    max-width: 2650px;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    overflow-y: hidden;
+    background-image: url('./assets/intro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(60px);
+}
+
+.story-cover{
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.story{
+    width: fit-content;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    img{
+        width: 80vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    h1{
+        color: white;
+        position: absolute;
+        left: 10vw;
+        top: 10vh;
+        font-size: 4rem;
+        text-shadow: 3px 3px 2px black;
+        font-weight: 900;
+    }
+    p{
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 10vw;
+        top: 25vh;
+        font-weight: 500;
+        width: 40vw;
+        font-size: 1.8rem;
+        text-shadow: 3px 3px 2px black;
+        background-color: rgba(240, 248, 255, 0.315);
+    }
+}
+
+.btn-cover{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 45vh;
+    left: 19vw;
+    z-index: 20;
+
+    .left, .right{
+        width: 70px;
+        height: 70px;
+        color: white;
+        cursor: pointer;
+        font-weight: 100;
+        &:hover{
+            color: rgb(255, 0, 76);
+        }
+    }
+}
+
+
+.thumbnail-cover{
+    position: absolute;
+    right: 1vh;
+    bottom: 10vh;
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .thumbnail{
+        position: relative;
+
+        h1{
+            width: auto;
+            color: white;
+            font-size: 1rem;
+            position: absolute;
+            top: 2vh;
+            left: 1vw;
+            margin: auto;
+            text-shadow: 3px 3px 2px black;
+        }
+    }
+}

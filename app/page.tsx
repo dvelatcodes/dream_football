@@ -1,95 +1,57 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image, { StaticImageData } from "next/image";
+import { BiCaretLeftSquare, BiCaretRightSquare } from "react-icons/bi";
+import "./styles.scss";
+import { story } from "./assets";
+
+type storyType = {
+  img: StaticImageData,
+  title: string,
+  desc: string,
+  blurDataURL: string,
+};
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className="carousel">
+      <div className="story-cover">
+        {story.map((content: storyType, index: number) => {
+          return (
+            <div className="story" key={index}>
+              <Image
+                src={content.img}
+                alt="story image"
+                width={300}
+                height={300}
+                placeholder="blur"
+                blurDataURL={content.blurDataURL}
+              />
+              <h1>{content.title}</h1>
+              <p>{content.desc}</p>
+            </div>
+          );
+        })}
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="btn-cover">
+        <BiCaretLeftSquare className="left" />
+        <BiCaretRightSquare className="right" />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="thumbnail-cover">
+        {story.map((content: storyType, index: number) => {
+          return (
+            <div className="thumbnail" key={index}>
+              <Image
+                src={content.img}
+                alt="story image"
+                width={140}
+                height={150}
+                placeholder="blur"
+                blurDataURL={content.blurDataURL}
+              />
+              <h1>{content.title}</h1>
+            </div>
+          );
+        })}
       </div>
-    </main>
+    </div>
   );
 }
