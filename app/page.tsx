@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
-import { BiCaretLeftSquare, BiCaretRightSquare } from "react-icons/bi";
+import { BiCaretLeftCircle, BiCaretRightCircle } from "react-icons/bi";
 import "./styles.scss";
-import { story } from "./assets";
+import { story, thumbnail } from "./assets";
 
 type storyType = {
   img: StaticImageData,
@@ -10,9 +10,15 @@ type storyType = {
   blurDataURL: string,
 };
 
+type thumbType = {
+  img: StaticImageData,
+  title: string,
+  blurDataURL: string,
+};
+
 export default function Home() {
   return (
-    <div className="carousel">
+    <div className="carousel prev">
       <div className="story-cover">
         {story.map((content: storyType, index: number) => {
           return (
@@ -32,11 +38,11 @@ export default function Home() {
         })}
       </div>
       <div className="btn-cover">
-        <BiCaretLeftSquare className="left" />
-        <BiCaretRightSquare className="right" />
+        <BiCaretLeftCircle className="left" />
+        <BiCaretRightCircle className="right" />
       </div>
-      <div className="thumbnail-cover">
-        {story.map((content: storyType, index: number) => {
+      <div className="thumbnail-cover prev">
+        {thumbnail.map((content: thumbType, index: number) => {
           return (
             <div className="thumbnail" key={index}>
               <Image

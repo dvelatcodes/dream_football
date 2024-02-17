@@ -80,3 +80,65 @@ export const story: Array<{
       "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLegacy.737a4e8b.jpg&w=5&q=70",
   },
 ];
+
+
+export const thumbnail: Array<{
+  img: StaticImageData;
+  title: string;
+  blurDataURL: string;
+}> = [
+  {
+    img: Quarterback,
+    title: "The Star Quarterback",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FQuarterback.b31958da.jpg&w=5&q=70",
+  },
+  {
+    img: timeout,
+    title: "A Strategic Timeout",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftimeout.95805bcc.jpg&w=5&q=70",
+  },
+  {
+    img: Hero,
+    title: "The Unlikely Hero",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FHero.268cb113.jpg&w=8&q=70",
+  },
+  {
+    img: Rivalry,
+    title: "Epic Rivalry",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FRivalry.706a82a4.jpg&w=5&q=70",
+  },
+  {
+    img: Mary,
+    title: "The Hail Mary",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMary.753f5a91.jpg&w=5&q=70",
+  },
+  {
+    img: Behind,
+    title: "Behind the Scenes",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FBehind.482b2812.jpg&w=5&q=70",
+  },
+  {
+    img: Innovations,
+    title: "Innovations in the Game",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FInnovation.0dec7bb5.jpg&w=8&q=70",
+  },
+  {
+    img: Legacy,
+    title: "Legacy of Legends",
+    blurDataURL:
+      "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLegacy.737a4e8b.jpg&w=5&q=70",
+    },
+    {
+      img: Kickoff,
+      title: "The Kickoff",
+      blurDataURL:
+        "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FKickoff.b64414d7.jpg&w=8&q=70",
+    },
+];
